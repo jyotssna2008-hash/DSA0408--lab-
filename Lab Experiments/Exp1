@@ -1,0 +1,13 @@
+import numpy as np
+# Fixed the second row to have 4 elements so the array is homogeneous
+marks = np.array([[85, 80, 67, 42],
+                  [56, 69 ,89, 99, ], 
+                  [98, 97, 96, 89],
+                  [98, 78, 88, 68]])
+
+avg = np.mean(marks, axis=0)
+print("avg marks:", avg)
+subjects = ["maths", "physics", "chemistry", "biology"]
+highest = np.argmax(avg)
+# Fixed typo from 'subject' to 'subjects'
+print("highest avg:", subjects[highest])
